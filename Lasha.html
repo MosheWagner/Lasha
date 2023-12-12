@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap">
+    <title>Lasha Donation Site</title>
+    <style>
+        body {
+            font-family: Roboto, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #1c1ac4;
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+        }
+
+        section {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            padding: 2em;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-right: 2em;
+        }
+
+        label {
+            font-size: 1.2em;
+        }
+
+        input {
+            padding: 0.5em;
+            font-size: 1em;
+            border: 1px solid #1c1ac4;
+            border-radius: 5px;
+            outline: none;
+        }
+
+        button {
+            padding: 0.5em 1em;
+            font-size: 1em;
+            cursor: pointer;
+            background-color: #1c1ac4;
+			border-radius: 5px;
+            color: #fff;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+	<header>
+		<h1>Lasha Bakery</h1>
+	</header>
+
+	<section>
+		<img src="Lasha.webp" alt="Support Image">
+		<div>
+			<img src="FlowerLogo.webp" alt="Support Image">
+		<h1>LASHA BAKERY</h1>
+		<p>
+			Lasha - "baking in the desert" bakery, started its journey with home baking for several years, and then became a professional bakery. Now it is a boutique bakery, specializing in healthy breads, sourdough, wholemeal flours and slow processes using traditional techniques.
+We make sure to use the finest raw materials. The bakery is located in Mitzpe Ramon and over time the bakery became an integral part of the local landscape.
+The magic of making has become an educational-experiential center of the world of bread. Groups come from Israel and abroad to attend an enriching workshop on the secrets of baking. The study reveals the technical, spiritual, historical, feminine and Jewish side of bread baking.
+The bakery shop is located in front of the bakery. The store presents the magical abundance produced in the bakery and in addition, presents delicacies from boutique producers who do their work with love. All the best from my words.
+Here you can enjoy the seating areas and savor our delicacies :)
+		</p>
+		<p>
+
+		</p>
+		<p>
+			Due to the War ongoing in Israel, we now provide the option to Donate to Communities from the South of Israel who are staying in Mitzpe Ramon.
+		</p>
+		<p>
+			Thanks for your donation!
+		</p>
+		<label for="name">Name:</label>
+		<input type="string" id="name" placeholder="name">
+		<label for="email">Email: </label>
+		<input type="email" id="email" placeholder="email">
+		<label for="donationAmount">Enter Amount in ILS: </label>
+		<input type="number" id="donationAmount" placeholder="Donation in ILS"><br><br>
+
+		<button onclick="submitDonation()">Send Donation</button>
+		</div>
+	</section>
+
+	<script>
+		function submitDonation() {
+			var name = document.getElementById('name').value;;
+			var email = document.getElementById('email').value;;
+			var price = document.getElementById('donationAmount').value;
+
+			const productName = 'Donation';
+			const formID = 202772397494467;
+			const currency = 'ILS';
+			var product = `"${productName} (Amount: ${price} ${currency}, Quantity: 1)"`;
+			var purchasePayload = `formID=${formID}&input11=${name}&input2=${email}&input10[product]=[${product}]`;
+
+			console.log(purchasePayload);
+
+			fetch("https://hook.eu1.make.com/6h4hse2y39divrdnljscsczctkvioj9q?t=e71019919cddb0723681d251a9343b11", {
+				"headers": {
+					"accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+					"accept-language": "en-US,en;q=0.9,he-IL;q=0.8,he;q=0.7",
+					"content-type": "application/x-www-form-urlencoded",
+				},
+				"referrer": "https://submit.jotform.com/",
+				"referrerPolicy": "strict-origin-when-cross-origin",
+				"body": purchasePayload,
+				"method": "POST",
+				"redirect": 'follow',
+			}).then(response => {
+				console.log(response.url);
+				window.open(response.url, '_blank');
+			})
+			.catch(function (err) {
+				console.info(err);
+			});
+		}
+	</script>
+</body>
+
+</html>
