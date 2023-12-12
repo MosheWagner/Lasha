@@ -2,59 +2,59 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap">
-    <title>Lasha Gift Card Site</title>
-    <style>
-        body {
-            font-family: Roboto, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
+	<title>Lasha Gift Card Site</title>
+	<style>
+		body {
+			font-family: Roboto, sans-serif;
+			margin: 0;
+			padding: 0;
+		}
 
-        header {
-            background-color: #1c1ac4;
-            color: #fff;
-            text-align: center;
-            padding: 1em;
-        }
+		header {
+			background-color: #1c1ac4;
+			color: #fff;
+			text-align: center;
+			padding: 1em;
+		}
 
-        section {
-            display: flex;
-            align-items: center;
-            justify-content: space-around;
-            padding: 2em;
-        }
+		section {
+			display: flex;
+			align-items: center;
+			justify-content: space-around;
+			padding: 2em;
+		}
 
-        img {
-            max-width: 100%;
-            height: auto;
-            margin-right: 2em;
-        }
+		img {
+			max-width: 100%;
+			height: auto;
+			margin-right: 2em;
+		}
 
-        label {
-            font-size: 1.2em;
-        }
+		label {
+			font-size: 1.2em;
+		}
 
-        input {
-            padding: 0.5em;
-            font-size: 1em;
-            border: 1px solid #1c1ac4;
-            border-radius: 5px;
-            outline: none;
-        }
-
-        button {
-            padding: 0.5em 1em;
-            font-size: 1em;
-            cursor: pointer;
-            background-color: #1c1ac4;
+		input {
+			padding: 0.5em;
+			font-size: 1em;
+			border: 1px solid #1c1ac4;
 			border-radius: 5px;
-            color: #fff;
-            border: none;
-        }
-    </style>
+			outline: none;
+		}
+
+		button {
+			padding: 0.5em 1em;
+			font-size: 1em;
+			cursor: pointer;
+			background-color: #1c1ac4;
+			border-radius: 5px;
+			color: #fff;
+			border: none;
+		}
+	</style>
 </head>
 
 <body>
@@ -64,33 +64,47 @@
 
 	<section>
 		<img src="Lasha.webp" alt="Support Image">
-		<div id = "mainText">
+		<div id="mainText">
 			<img src="FlowerLogo.webp" alt="Support Image">
-		<h1>LASHA BAKERY</h1>
-		<p>
-			Lasha - "baking in the desert" bakery, started its journey with home baking for several years, and then became a professional bakery. Today it is a boutique bakery, specializing in healthy breads, sourdough, wholemeal flours and slow processes using traditional techniques.
-We make sure to use the finest raw materials. The bakery is located in Mitzpe Ramon and over time the bakery became an integral part of the local landscape.
-The magic of baking has become an educational-experiential center of the world of bread. Groups come from Israel and abroad to attend enriching workshops revealing the technical, spiritual, historical, feminine and Jewish side of bread baking.
-The bakery shop is located at the front of the bakery. The store displays the magical abundance produced in the bakery and in addition, displays delicacies from boutique producers who create with love. 
-You can relax at our seating area, and savor our delicacies :)
-		</p>
-		<p>
+			<h1>LASHA BAKERY</h1>
+			<p>
+				Lasha - "baking in the desert" bakery, started its journey with home baking for several years, and then
+				became a professional bakery. Today it is a boutique bakery, specializing in healthy breads, sourdough,
+				wholemeal flours and slow processes using traditional techniques.
+				We make sure to use the finest raw materials. The bakery is located in Mitzpe Ramon and over time the
+				bakery became an integral part of the local landscape.
+				The magic of baking has become an educational-experiential center of the world of bread. Groups come
+				from Israel and abroad to attend enriching workshops revealing the technical, spiritual, historical,
+				feminine and Jewish side of bread baking.
+				The bakery shop is located at the front of the bakery. The store displays the magical abundance produced
+				in the bakery and in addition, displays delicacies from boutique producers who create with love.
+				You can relax at our seating area, and savor our delicacies :)
+			</p>
+			<p>
 
-		</p>
-		<p>
-			Due to the ongoing war in Israel, we now provide the option to purchase Gift Cards for Communities from the South of Israel who are staying in Mitzpe Ramon.
-		</p>
-		<p>
-			Thanks for supporting Israel!
-		</p>
-		<label for="name">Name:</label>
-		<input type="string" id="name" placeholder="name">
-		<label for="email">Email: </label>
-		<input type="email" id="email" placeholder="email">
-		<label for="donationAmount">Enter Amount in ILS: </label>
-		<input type="number" id="donationAmount" placeholder="Amount in ILS" min=100><br><br>
+			<p>You can visit the full Hebrew version of our website <a href="https://www.lashabakery.com">Here</a>.</p>
 
-		<button onclick="submitDonation()">Purchase Gift Card</button>
+			</p>
+			<p>
+				Due to the war ongoing in Israel, we now provide the option to purchase gift cards for displaced members
+				of communities from the South of Israel who are now staying Mitzpe Ramon, and for local families of
+				soldiers who are currently serving. 
+				
+				The gift cards will be used by the staff of the Bakey to purchase from the variety of Lasha's baked goods.
+			</p>
+
+			<label for="name">Name:</label>
+			<input type="string" id="name" placeholder="name">
+			<label for="email">Email: </label>
+			<input type="email" id="email" placeholder="email">
+			<label for="donationAmount">Gift Card Amount in ILS: </label>
+			<input type="number" id="donationAmount" placeholder="Amount in ILS" min=100><br><br>
+
+			<p>NOTE: Payments are processed via an Israeli payment processing company, and therefore the form is in Hebrew. It will ask for the Credit Card's number, expiration date, CCV an ID number (which can't be left blank, but any number will do), and name for billing.</p>
+			<p>
+				Thanks for supporting Israel!
+			</p>
+			<button onclick="submitDonation()">Purchase Gift Card</button>
 		</div>
 	</section>
 
@@ -130,9 +144,9 @@ You can relax at our seating area, and savor our delicacies :)
 				document.getElementById('mainText').innerHTML = "<div><b>Thanks! The recipt will arrive by email shortly.</b></div>";
 
 			})
-			.catch(function (err) {
-				console.info(err);
-			});
+				.catch(function (err) {
+					console.info(err);
+				});
 		}
 	</script>
 </body>
