@@ -88,7 +88,7 @@ Here you can enjoy the seating areas and savor our delicacies :)
 		<label for="email">Email: </label>
 		<input type="email" id="email" placeholder="email">
 		<label for="donationAmount">Enter Amount in ILS: </label>
-		<input type="number" id="donationAmount" placeholder="Donation in ILS"><br><br>
+		<input type="number" id="donationAmount" placeholder="Donation in ILS" min=100><br><br>
 
 		<button onclick="submitDonation()">Send Donation</button>
 		</div>
@@ -105,6 +105,11 @@ Here you can enjoy the seating areas and savor our delicacies :)
 			const currency = 'ILS';
 			var product = `"${productName} (Amount: ${price} ${currency}, Quantity: 1)"`;
 			var purchasePayload = `formID=${formID}&input11=${name}&input2=${email}&input10[product]=[${product}]`;
+
+			if (price < 100) {
+				alert('Sorry, the Credit Card company only accepts amounts of 100 ILS and above.');
+				return;
+			}
 
 			console.log(purchasePayload);
 
