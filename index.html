@@ -86,12 +86,12 @@
 
 			</p>
 			<p>
-				Due to the war ongoing in Israel, we now provide the option to purchase gift cards for displaced members
-				of communities from the South of Israel who are now staying Mitzpe Ramon, and for local families of
-				soldiers who are currently serving.
-
-				The gift cards will be used by the staff of the Bakery to purchase from the variety of Lasha's baked
-				goods.
+				Due to the war ongoing in Israel, we now provide the option to purchase bakery items to be distributed
+				to soldiers, local families of soldiers who are currently serving, and displaced members of communities
+				from the South of Israel who are now staying in Mitzpe Ramon.
+				For example, the staff of the bakey could use 100NIS to provide a soldier with challah, rolls and
+				pastries. Help us show our love and
+				support.
 			</p>
 
 			<label for="name">Name:</label>
@@ -102,12 +102,12 @@
 			<input type="number" id="donationAmount" placeholder="Amount in ILS" min=100><br><br>
 
 			<p>NOTE: Payments are processed via an Israeli payment processing company, and therefore the form is in
-				Hebrew. It will ask for the Credit Card's number, expiration date, CCV an ID number (which can't be left
+				Hebrew and currency in ILS. It will ask for the Credit Card's number, expiration date, CCV an ID number (which can't be left
 				blank, but any number will do), and name for billing.</p>
 			<p>
 				Thanks for supporting Israel!
 			</p>
-			<button onclick="submitDonation()">Purchase Gift Card</button>
+			<button onclick="submitDonation()">Purchase</button>
 		</div>
 	</section>
 
@@ -117,7 +117,7 @@
 			var email = document.getElementById('email').value;
 			var price = document.getElementById('donationAmount').value;
 
-			const productName = 'Donation';
+			const productName = 'Support Israel';
 			const formID = 202772397494467;
 			const currency = 'ILS';
 			var product = `"${productName} (Amount: ${price} ${currency}, Quantity: 1)"`;
